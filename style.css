@@ -1,0 +1,551 @@
+:root {
+    --green: #0f3d33;
+    --lime: #c8f169;
+    --paper: #f6f7f2;
+    --tint: #e9efe0;
+    --ink: #12201c;
+    --muted: #53635d;
+    --pad-x: clamp(1.25rem, 5vw, 4rem);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    font-family: "Golos Text", system-ui, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--lime);
+    outline-offset: 3px;
+}
+
+/* Шапка */
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1.25rem var(--pad-x);
+    background: var(--green);
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.top nav {
+    display: flex;
+    gap: 1.75rem;
+    margin-left: auto;
+}
+
+.top nav a {
+    text-decoration: none;
+}
+
+.top nav a:hover {
+    text-decoration: underline;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 0.95rem 1.7rem;
+    border: 0;
+    border-radius: 12px;
+    background: var(--lime);
+    color: var(--ink);
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #fff;
+}
+
+.btn-small {
+    padding: 0.6rem 1.2rem;
+}
+
+/* Головний екран */
+.hero {
+    padding: clamp(3rem, 9vw, 7rem) var(--pad-x) clamp(3rem, 8vw, 6rem);
+    background: var(--green);
+    color: #fff;
+}
+
+.hero h1 {
+    max-width: 16ch;
+    font-size: clamp(2.3rem, 6.5vw, 5rem);
+    font-weight: 800;
+    line-height: 1.05;
+}
+
+.hero p {
+    max-width: 44ch;
+    margin: 1.5rem 0 2rem;
+    font-size: 1.2rem;
+    color: #d5e5df;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem 3rem;
+    margin-top: 3.5rem;
+}
+
+.stats div {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.stats dd {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--lime);
+}
+
+.stats dt {
+    color: #b9cfc7;
+    font-size: 0.95rem;
+}
+
+/* Секції */
+.section {
+    padding: clamp(3rem, 8vw, 6rem) var(--pad-x);
+}
+
+.section-tint {
+    background: var(--tint);
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Картки послуг */
+.card {
+    padding: 2rem;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.price {
+    margin: 0.5rem 0 1.25rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.card ul {
+    padding-left: 1.2rem;
+    color: var(--muted);
+}
+
+.card li {
+    padding: 0.15rem 0;
+}
+
+/* Кроки */
+.steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+}
+
+.num {
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--lime);
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.steps p {
+    margin-top: 0.4rem;
+    color: var(--muted);
+}
+
+/* Відгуки */
+.review {
+    padding: 2rem;
+    border-radius: 20px;
+    background: var(--tint);
+}
+
+.rating-summary {
+    margin: -1rem 0 2rem;
+    color: var(--muted);
+}
+
+.rating-summary strong {
+    font-size: 1.4rem;
+    color: var(--ink);
+}
+
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.review-head {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.avatar {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--green);
+    color: var(--lime);
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.review:nth-child(even) .avatar {
+    background: var(--lime);
+    color: var(--green);
+}
+
+.name {
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.meta {
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: var(--muted);
+}
+
+.stars {
+    margin-left: auto;
+    color: #b87a00;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+}
+
+.review blockquote p {
+    font-size: 1.05rem;
+}
+
+.reply {
+    margin-top: 1rem;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    background: #fff;
+    font-size: 0.95rem;
+}
+
+/* Форма */
+.order {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    background: var(--green);
+    color: #fff;
+}
+
+.order h2 {
+    margin-bottom: 1rem;
+}
+
+.order-text p {
+    max-width: 36ch;
+    color: #d5e5df;
+}
+
+.form {
+    display: grid;
+    gap: 1.1rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background: #fff;
+    color: var(--ink);
+}
+
+.form label {
+    display: grid;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.form input,
+.form select {
+    padding: 0.8rem 1rem;
+    border: 2px solid #cfd8d3;
+    border-radius: 10px;
+    background: #fff;
+    font: inherit;
+    font-weight: 400;
+}
+
+.form input:focus,
+.form select:focus {
+    border-color: var(--green);
+    outline: none;
+}
+
+.form .btn {
+    background: var(--green);
+    color: #fff;
+}
+
+.form .btn:hover {
+    background: #1b5c4c;
+}
+
+/* Підвал */
+.foot {
+    padding: 1.5rem var(--pad-x);
+    background: var(--ink);
+    color: #b9cfc7;
+    font-size: 0.95rem;
+}
+
+/* Зображення */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 3rem;
+    align-items: center;
+}
+
+.hero-art {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    justify-self: center;
+}
+
+.card-img {
+    display: block;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-art {
+        max-width: 240px;
+        justify-self: start;
+    }
+}
+
+/* JavaScript: меню, калькулятор, форма */
+.burger {
+    display: none;
+    padding: 0.6rem;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.burger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    margin: 5px 0;
+    background: #fff;
+}
+
+.calc {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.form fieldset {
+    display: grid;
+    gap: 0.6rem;
+    padding: 0;
+    border: 0;
+}
+
+.form legend {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.form .checks label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 400;
+}
+
+.form input[type="checkbox"] {
+    width: 1.2rem;
+    height: 1.2rem;
+    padding: 0;
+    accent-color: var(--green);
+}
+
+.form input[type="range"] {
+    padding: 0;
+    border: 0;
+    accent-color: var(--green);
+}
+
+.form output {
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.calc-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem;
+    border-radius: 20px;
+    background: var(--green);
+    color: #fff;
+}
+
+.calc-total {
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--lime);
+}
+
+.calc-detail {
+    margin-bottom: 0.75rem;
+    color: #d5e5df;
+}
+
+.calc-result .btn {
+    align-self: flex-start;
+}
+
+.error {
+    min-height: 1.2em;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #b42318;
+}
+
+.form input[aria-invalid="true"] {
+    border-color: #b42318;
+}
+
+.form .btn:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.order-note,
+.form-status {
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+}
+
+.order-note {
+    background: var(--tint);
+}
+
+.form-status {
+    background: var(--lime);
+    font-weight: 600;
+}
+
+/* Телефони */
+@media (max-width: 700px) {
+    .top {
+        position: relative;
+    }
+
+    .top .btn-small {
+        margin-left: auto;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .top nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 5;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        padding: 0.5rem var(--pad-x) 1.25rem;
+        background: var(--green);
+    }
+
+    .top nav.open {
+        display: flex;
+    }
+
+    .top nav a {
+        padding: 0.75rem 0;
+        font-size: 1.1rem;
+    }
+}

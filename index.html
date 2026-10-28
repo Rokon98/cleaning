@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Блиск: клінінг квартир і офісів у Києві</title>
+    <meta
+      name="description"
+      content="Прибирання квартир і офісів у Києві. Підтримуюче, генеральне та після ремонту. Заявка за хвилину."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="top">
+      <a class="logo" href="#">Блиск</a>
+      <nav id="nav" aria-label="Основна навігація">
+        <a href="#services">Послуги</a>
+        <a href="#steps">Як це працює</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#calc">Калькулятор</a>
+      </nav>
+      <a class="btn btn-small" href="#order">Замовити</a>
+      <button
+        class="burger"
+        type="button"
+        aria-label="Відкрити меню"
+        aria-expanded="false"
+        aria-controls="nav"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Чистий дім без вашої участі</h1>
+          <p>
+            Приїдемо у зручний час, привеземо все потрібне й зробимо так, щоб
+            вам хотілося повернутися додому.
+          </p>
+          <a class="btn" href="#order">Розрахувати вартість</a>
+          <dl class="stats">
+            <div>
+              <dt>Прибирань</dt>
+              <dd>1 200+</dd>
+            </div>
+            <div>
+              <dt>Середня оцінка</dt>
+              <dd>4,9</dd>
+            </div>
+            <div>
+              <dt>Приїзд за</dt>
+              <dd>2 години</dd>
+            </div>
+          </dl>
+        </div>
+        <img
+          class="hero-art"
+          src="images/hero.svg"
+          alt=""
+          width="400"
+          height="400"
+        />
+      </section>
+
+      <section id="services" class="section">
+        <h2>Послуги та ціни</h2>
+        <div class="cols">
+          <article class="card">
+            <img
+              class="card-img"
+              src="images/maintenance.svg"
+              alt=""
+              width="72"
+              height="72"
+            />
+            <h3>Підтримуюче прибирання</h3>
+            <p class="price">від 1 200 ₴</p>
+            <ul>
+              <li>Вологе прибирання поверхонь</li>
+              <li>Кухня й санвузол</li>
+              <li>Підлоги та вивіз сміття</li>
+            </ul>
+          </article>
+          <article class="card">
+            <img
+              class="card-img"
+              src="images/general.svg"
+              alt=""
+              width="72"
+              height="72"
+            />
+            <h3>Генеральне прибирання</h3>
+            <p class="price">від 2 800 ₴</p>
+            <ul>
+              <li>Усе з підтримуючого</li>
+              <li>Вікна й дзеркала</li>
+              <li>Всередині шаф і техніки</li>
+            </ul>
+          </article>
+          <article class="card">
+            <img
+              class="card-img"
+              src="images/renovation.svg"
+              alt=""
+              width="72"
+              height="72"
+            />
+            <h3>Після ремонту</h3>
+            <p class="price">від 3 500 ₴</p>
+            <ul>
+              <li>Будівельний пил</li>
+              <li>Залишки плитки й розчину</li>
+              <li>Миття всіх поверхонь</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="steps" class="section section-tint">
+        <h2>Як це працює</h2>
+        <ol class="steps">
+          <li>
+            <span class="num">1</span>
+            <h3>Залишаєте заявку</h3>
+            <p>Вказуєте ім'я, телефон і тип прибирання. Це займає хвилину.</p>
+          </li>
+          <li>
+            <span class="num">2</span>
+            <h3>Узгоджуємо час</h3>
+            <p>Передзвонюємо, уточнюємо площу та називаємо точну ціну.</p>
+          </li>
+          <li>
+            <span class="num">3</span>
+            <h3>Приїжджаємо й прибираємо</h3>
+            <p>
+              Команда привозить засоби та обладнання. Ви лише приймаєте
+              результат.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section id="reviews" class="section">
+        <h2>Що кажуть клієнти</h2>
+        <p class="rating-summary">
+          <strong>4,9</strong> з 5 за відгуками клієнтів
+        </p>
+        <div class="reviews">
+          <figure class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">ОК</span>
+              <div>
+                <p class="name">Олена К.</p>
+                <p class="meta">
+                  Позняки, Генеральне прибирання,
+                  <time datetime="2026-10-14">14 жовтня</time>
+                </p>
+              </div>
+              <span class="stars" role="img" aria-label="Оцінка 5 з 5"
+                >★★★★★</span
+              >
+            </div>
+            <blockquote>
+              <p>
+                Замовляла генеральне перед приїздом батьків. Приїхали дві
+                дівчини, закінчили за чотири години. Найбільше порадувало, що
+                без прохання відмили духовку й вікна на балконі. Наступного разу
+                замовлю знову.
+              </p>
+            </blockquote>
+          </figure>
+          <figure class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">АТ</span>
+              <div>
+                <p class="name">Андрій Т.</p>
+                <p class="meta">
+                  Поділ, Підтримуюче прибирання,
+                  <time datetime="2026-10-09">9 жовтня</time>
+                </p>
+              </div>
+              <span class="stars" role="img" aria-label="Оцінка 5 з 5"
+                >★★★★★</span
+              >
+            </div>
+            <blockquote>
+              <p>
+                Беремо щотижня для невеликого офісу, 40 м². Уже другий місяць
+                без жодних претензій. Єдине побажання: хотілося б час після
+                19:00, зараз доступно тільки до 18:00.
+              </p>
+            </blockquote>
+            <p class="reply">
+              <strong>Відповідь «Блиск»:</strong> Дякуємо, Андрію! З листопада
+              з'являться вечірні слоти, напишемо вам окремо.
+            </p>
+          </figure>
+          <figure class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">МВ</span>
+              <div>
+                <p class="name">Марина В.</p>
+                <p class="meta">
+                  Оболонь, Після ремонту,
+                  <time datetime="2026-10-02">2 жовтня</time>
+                </p>
+              </div>
+              <span class="stars" role="img" aria-label="Оцінка 4 з 5"
+                >★★★★☆</span
+              >
+            </div>
+            <blockquote>
+              <p>
+                Квартира після ремонту була дуже запилена. Ціну назвали по
+                телефону, і вона збіглася з фінальною. Біля вікна залишилася
+                пляма на плитці, але наступного дня приїхали й виправили
+                безкоштовно. Загалом задоволена.
+              </p>
+            </blockquote>
+          </figure>
+          <figure class="review">
+            <div class="review-head">
+              <span class="avatar" aria-hidden="true">ІС</span>
+              <div>
+                <p class="name">Ігор С.</p>
+                <p class="meta">
+                  Теремки, Підтримуюче прибирання,
+                  <time datetime="2026-09-21">21 вересня</time>
+                </p>
+              </div>
+              <span class="stars" role="img" aria-label="Оцінка 5 з 5"
+                >★★★★★</span
+              >
+            </div>
+            <blockquote>
+              <p>
+                Зручно, що можна заплатити карткою після прибирання. Приїхали
+                навіть раніше, ніж домовлялись.
+              </p>
+            </blockquote>
+          </figure>
+        </div>
+      </section>
+
+      <section id="calc" class="section section-tint">
+        <h2>Розрахуйте вартість</h2>
+        <div class="calc">
+          <form class="form" id="calc-form">
+            <label
+              >Тип прибирання
+              <select id="calc-type">
+                <option value="maintenance">Підтримуюче прибирання</option>
+                <option value="general">Генеральне прибирання</option>
+                <option value="renovation">Після ремонту</option>
+              </select>
+            </label>
+            <label
+              >Площа
+              <input
+                id="calc-area"
+                type="range"
+                min="20"
+                max="200"
+                step="5"
+                value="60"
+              />
+              <output id="calc-area-out" for="calc-area">60 м²</output>
+            </label>
+            <fieldset class="checks">
+              <legend>Додатково</legend>
+              <label
+                ><input type="checkbox" data-price="400" /> Духовка (+400
+                ₴)</label
+              >
+              <label
+                ><input type="checkbox" data-price="350" /> Холодильник (+350
+                ₴)</label
+              >
+              <label
+                ><input type="checkbox" data-price="600" /> Вікна, до 5 шт.
+                (+600 ₴)</label
+              >
+              <label
+                ><input type="checkbox" data-price="500" /> Балкон (+500
+                ₴)</label
+              >
+            </fieldset>
+          </form>
+          <div class="calc-result">
+            <p>Орієнтовна вартість</p>
+            <p class="calc-total" id="calc-price" aria-live="polite">1 320 ₴</p>
+            <p class="calc-detail" id="calc-detail"></p>
+            <a class="btn" id="calc-order" href="#order"
+              >Замовити за цією ціною</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="order" class="section order">
+        <div class="order-text">
+          <h2>Залишіть заявку</h2>
+          <p>
+            Передзвонимо протягом 15 хвилин у робочий час і назвемо точну
+            вартість.
+          </p>
+        </div>
+        <form class="form" id="order-form" action="#" method="post" novalidate>
+          <label
+            >Ім'я
+            <input
+              id="f-name"
+              type="text"
+              name="name"
+              autocomplete="name"
+              aria-describedby="err-name"
+              required
+            />
+            <span class="error" id="err-name"></span>
+          </label>
+          <label
+            >Телефон
+            <input
+              id="f-phone"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="+380 50 123 45 67"
+              aria-describedby="err-phone"
+              required
+            />
+            <span class="error" id="err-phone"></span>
+          </label>
+          <label
+            >Послуга
+            <select id="f-service" name="service">
+              <option value="maintenance">Підтримуюче прибирання</option>
+              <option value="general">Генеральне прибирання</option>
+              <option value="renovation">Прибирання після ремонту</option>
+            </select>
+          </label>
+          <p class="order-note" id="order-note" hidden></p>
+          <button class="btn" type="submit">Надіслати заявку</button>
+          <p class="form-status" id="form-status" role="status" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>© 2026 «Блиск». Демо-проєкт для портфоліо.</p>
+    </footer>
+  </body>
+</html>
